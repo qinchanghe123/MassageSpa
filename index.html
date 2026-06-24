@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Massage Spa | Reno, NV</title>
-  <meta name="description" content="Massage Spa in Reno, NV. Relaxing foot reflexology, body massage, combo massage, 4 hands massage, and cupping massage." />
+  <meta name="description" content="Massage Spa in Reno, NV. Foot reflexology, combo massage, body massage, 4 hands massage, and cupping massage." />
 
   <style>
     :root {
@@ -103,18 +103,6 @@
       background: var(--rose-dark);
     }
 
-    .btn.secondary {
-      background: rgba(255, 255, 255, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.45);
-      box-shadow: none;
-      backdrop-filter: blur(8px);
-    }
-
-    .btn.secondary:hover {
-      background: rgba(255, 255, 255, 0.28);
-    }
-
-    /* Header */
     .site-header {
       position: fixed;
       top: 0;
@@ -163,7 +151,7 @@
       color: var(--rose);
     }
 
-    .nav .nav-book {
+    .nav .nav-call {
       padding: 10px 18px;
       background: var(--rose);
       color: white;
@@ -183,7 +171,6 @@
       font-weight: 900;
     }
 
-    /* Hero */
     .hero {
       min-height: 100vh;
       position: relative;
@@ -251,13 +238,6 @@
       margin-bottom: 32px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-    }
-
     .hero-info {
       margin-top: 28px;
       display: flex;
@@ -274,7 +254,6 @@
       background: rgba(255, 255, 255, 0.12);
     }
 
-    /* About */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 0.9fr;
@@ -349,13 +328,11 @@
       color: var(--brown);
       border-radius: 999px;
       font-weight: 900;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
     }
 
-    /* Services */
     .services {
-      background:
-        linear-gradient(180deg, #fff8f5 0%, #fff1ec 100%);
+      background: linear-gradient(180deg, #fff8f5 0%, #fff1ec 100%);
     }
 
     .services-head {
@@ -476,100 +453,40 @@
       margin-top: 2px;
     }
 
-    /* Booking */
-    .booking {
+    .call-section {
       background:
         radial-gradient(circle at 10% 0%, rgba(217, 95, 122, 0.12), transparent 30%),
         radial-gradient(circle at 90% 20%, rgba(198, 155, 98, 0.18), transparent 32%),
         var(--cream);
     }
 
-    .booking-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 32px;
-      align-items: start;
-    }
-
-    .booking-card,
-    .booking-form {
+    .call-card {
       background: white;
-      border-radius: 28px;
+      border-radius: 34px;
       box-shadow: var(--shadow);
       border: 1px solid rgba(90, 58, 46, 0.08);
-      padding: clamp(24px, 4vw, 38px);
-    }
-
-    .booking-card h3 {
-      font-size: 1.8rem;
-      margin-bottom: 14px;
-    }
-
-    .booking-list {
+      padding: clamp(28px, 5vw, 52px);
       display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .call-details {
+      display: flex;
+      flex-wrap: wrap;
       gap: 14px;
-      margin: 24px 0;
+      margin-top: 22px;
     }
 
-    .booking-list p {
-      padding: 16px;
-      border-radius: 18px;
+    .call-details span {
+      padding: 11px 16px;
       background: #fff8f5;
+      border-radius: 999px;
       color: var(--muted);
-    }
-
-    .booking-list strong {
-      color: var(--brown);
-      display: block;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .field {
-      display: grid;
-      gap: 7px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
       font-weight: 800;
-      font-size: 0.92rem;
     }
 
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid rgba(90, 58, 46, 0.15);
-      border-radius: 16px;
-      padding: 13px 14px;
-      background: #fffaf7;
-      color: var(--brown);
-      font: inherit;
-      outline: none;
-      transition: 0.2s ease;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--rose);
-      box-shadow: 0 0 0 4px rgba(217, 95, 122, 0.12);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    /* Testimonials */
     .reviews {
       background: #3b261f;
       color: white;
@@ -642,7 +559,6 @@
       to { transform: translateX(0); }
     }
 
-    /* FAQ */
     .faq-grid {
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
@@ -712,7 +628,6 @@
       color: white;
     }
 
-    /* Contact */
     .contact {
       background: #fff1ec;
     }
@@ -785,7 +700,6 @@
       font-size: 0.92rem;
     }
 
-    /* Responsive */
     @media (max-width: 940px) {
       .menu-toggle {
         display: inline-flex;
@@ -825,15 +739,15 @@
         background: #fff1ec;
       }
 
-      .nav .nav-book {
+      .nav .nav-call {
         text-align: center;
         margin-top: 6px;
       }
 
       .about-grid,
-      .booking-grid,
       .faq-grid,
-      .contact-grid {
+      .contact-grid,
+      .call-card {
         grid-template-columns: 1fr;
       }
 
@@ -860,16 +774,8 @@
         border-radius: 26px;
       }
 
-      .hero-actions {
-        align-items: stretch;
-      }
-
-      .hero-actions .btn {
+      .btn {
         width: 100%;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
       }
 
       .service-slider {
@@ -892,26 +798,13 @@
         padding: 12px 0;
       }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
   </style>
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="Massage Spa Home">
+      <a href="#home" class="logo">
         Massage Spa
         <span>Reno Relaxation</span>
       </a>
@@ -924,13 +817,12 @@
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQs</a>
         <a href="#contact">Contact</a>
-        <a class="nav-book" href="#booking">Book Now</a>
+        <a class="nav-call" href="tel:+17755129269">Call to Book</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Home -->
     <section class="hero" id="home">
       <div class="hero-slides" aria-hidden="true">
         <div class="hero-slide active" style="background-image:url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg')"></div>
@@ -938,6 +830,7 @@
         <div class="hero-slide" style="background-image:url('https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg')"></div>
         <div class="hero-slide" style="background-image:url('https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg')"></div>
       </div>
+
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
@@ -948,10 +841,7 @@
             Step away from stress and enjoy a quiet, clean, and relaxing spa experience designed to help your body unwind.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn" href="#booking">Book Now</a>
-            <a class="btn secondary" href="tel:+17755129269">Call (775) 512-9269</a>
-          </div>
+          <a class="btn" href="tel:+17755129269">Call to Book</a>
 
           <div class="hero-info">
             <span>Open 9:00 AM - 10:30 PM</span>
@@ -961,7 +851,6 @@
       </div>
     </section>
 
-    <!-- About Us -->
     <section class="section" id="about">
       <div class="container about-grid">
         <div class="about-panel">
@@ -998,11 +887,10 @@
           </div>
         </div>
 
-        <div class="about-visual" aria-label="Quiet massage room atmosphere"></div>
+        <div class="about-visual"></div>
       </div>
     </section>
 
-    <!-- Services -->
     <section class="section services" id="services">
       <div class="container">
         <div class="services-head">
@@ -1013,11 +901,11 @@
               Pricing is based on the in-store menu. Please call to confirm availability before visiting.
             </p>
           </div>
-          <a class="btn" href="#booking">Book a Session</a>
+
+          <a class="btn" href="tel:+17755129269">Call to Book</a>
         </div>
 
         <div class="service-grid">
-          <!-- Foot Reflexology -->
           <article class="service-card">
             <div class="service-slider">
               <img class="active" src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Foot reflexology massage" />
@@ -1025,6 +913,7 @@
               <img src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg" alt="Foot reflexology spa service" />
               <img src="https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg" alt="Foot massage treatment" />
             </div>
+
             <div class="service-content">
               <div class="service-topline">
                 <h3>Foot Reflexology</h3>
@@ -1033,6 +922,7 @@
               <p class="service-desc">
                 Ideal for tired feet, long workdays, and anyone who wants focused relaxation from the soles upward.
               </p>
+
               <table class="price-table">
                 <tr>
                   <td>30 Min</td>
@@ -1053,13 +943,13 @@
             </div>
           </article>
 
-          <!-- Combo Massage -->
           <article class="service-card">
             <div class="service-slider">
-              <img class="active" src="https://balizen.ro/_astro/balizen_118.C9mVKzan.jpg" alt="Body massage portion of combo massage" />
-              <img src="https://balizen.ro/_astro/balizen_39.BZouHQNH.jpg" alt="Foot massage portion of combo massage" />
-              <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Relaxing body massage" />
+              <img class="active" src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Body massage portion of combo massage" />
+              <img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Foot massage portion of combo massage" />
+              <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Relaxing combo massage" />
             </div>
+
             <div class="service-content">
               <div class="service-topline">
                 <h3>Combo Massage</h3>
@@ -1068,6 +958,7 @@
               <p class="service-desc">
                 A balanced session combining body massage and foot massage, great for full refreshment and head-to-toe relaxation.
               </p>
+
               <table class="price-table">
                 <tr>
                   <td>60 Min</td>
@@ -1088,22 +979,23 @@
             </div>
           </article>
 
-          <!-- Body Massage -->
           <article class="service-card">
             <div class="service-slider">
               <img class="active" src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Body massage spa treatment" />
               <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Professional body massage" />
               <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Relaxing full body massage" />
-              <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Deep tissue style body massage" />
+              <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Body massage treatment" />
             </div>
+
             <div class="service-content">
               <div class="service-topline">
                 <h3>Body Massage</h3>
                 <span class="price-range">$50 - $140</span>
               </div>
               <p class="service-desc">
-                Choose Swedish or Deep Tissue style pressure to ease stiffness, daily tension, and stress. Select longer sessions for more complete relaxation.
+                Choose Swedish or Deep Tissue style pressure to ease stiffness, daily tension, and stress.
               </p>
+
               <table class="price-table">
                 <tr>
                   <td>30 Min</td>
@@ -1134,13 +1026,13 @@
             </div>
           </article>
 
-          <!-- 4 Hands Massage -->
           <article class="service-card">
             <div class="service-slider">
               <img class="active" src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg" alt="4 hands massage" />
               <img src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg" alt="Four hands synchronized massage" />
               <img src="https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg" alt="4 hands spa massage" />
             </div>
+
             <div class="service-content">
               <div class="service-topline">
                 <h3>4 Hands Massage</h3>
@@ -1149,9 +1041,10 @@
               <p class="service-desc">
                 A deeply relaxing synchronized massage experience for guests who want a fuller, more immersive bodywork session.
               </p>
+
               <table class="price-table">
                 <tr>
-                  <td>Call</td>
+                  <td>Session</td>
                   <td>4 Hands Massage <small>Two therapists work on one client + FREE Hot Stone</small></td>
                   <td>$145</td>
                 </tr>
@@ -1159,11 +1052,13 @@
             </div>
           </article>
 
-          <!-- Cupping Massage -->
           <article class="service-card">
             <div class="service-slider">
-              <img class="active" src="https://balizen.ro/_astro/balizen_ventuze.DhSQrenQ.jpg" alt="Cupping massage treatment" />
+              <img class="active" src="https://i.pinimg.com/736x/c5/34/4d/c5344df931b818ba9542788952be2e3f.jpg" alt="Cupping massage treatment" />
+              <img src="https://i.pinimg.com/736x/37/06/55/370655de9bea8067488a6a0db876e377.jpg" alt="Relaxing cupping therapy" />
+              <img src="https://i.pinimg.com/736x/1c/5a/27/1c5a27093894d0c0c76298468a7fc5a4.jpg" alt="Cupping massage spa service" />
             </div>
+
             <div class="service-content">
               <div class="service-topline">
                 <h3>Cupping Massage</h3>
@@ -1172,6 +1067,7 @@
               <p class="service-desc">
                 Designed for stubborn muscle tension and deep release. This service includes Chinese White Flower Oil and FREE Hot Stone.
               </p>
+
               <table class="price-table">
                 <tr>
                   <td>70 Min</td>
@@ -1190,77 +1086,28 @@
       </div>
     </section>
 
-    <!-- Booking -->
-    <section class="section booking" id="booking">
-      <div class="container booking-grid">
-        <div class="booking-card">
-          <div class="eyebrow">Book Now</div>
-          <h2 class="section-title">Ready to relax?</h2>
-          <p class="section-lead">
-            Send a booking request or call directly for the fastest confirmation.
-          </p>
+    <section class="section call-section" id="call">
+      <div class="container">
+        <div class="call-card">
+          <div>
+            <div class="eyebrow">Call to Book</div>
+            <h2 class="section-title">Ready to relax?</h2>
+            <p class="section-lead">
+              For the fastest appointment confirmation, please call Massage Spa directly.
+            </p>
 
-          <div class="booking-list">
-            <p>
-              <strong>Phone</strong>
-              <a href="tel:+17755129269">(775) 512-9269</a>
-            </p>
-            <p>
-              <strong>Hours</strong>
-              9:00 AM - 10:30 PM
-            </p>
-            <p>
-              <strong>Address</strong>
-              6490 S. McCarran Blvd., Bldg. DI #33, Reno, NV 89509
-            </p>
+            <div class="call-details">
+              <span>(775) 512-9269</span>
+              <span>9:00 AM - 10:30 PM</span>
+              <span>Reno, NV 89509</span>
+            </div>
           </div>
 
           <a class="btn" href="tel:+17755129269">Call to Book</a>
         </div>
-
-        <form class="booking-form" id="bookingForm">
-          <div class="form-grid">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required />
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
-            </div>
-
-            <div class="field">
-              <label for="service">Service</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option>Foot Reflexology</option>
-                <option>Combo Massage</option>
-                <option>Body Massage</option>
-                <option>4 Hands Massage</option>
-                <option>Cupping Massage</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="time">Preferred Time</label>
-              <input id="time" name="time" type="text" placeholder="Example: Today 6 PM" />
-            </div>
-
-            <div class="field full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Preferred duration, pressure, or questions"></textarea>
-            </div>
-
-            <div class="field full">
-              <button class="btn" type="submit">Submit Request</button>
-            </div>
-          </div>
-        </form>
       </div>
     </section>
 
-    <!-- Reviews -->
     <section class="section reviews" id="reviews">
       <div class="container">
         <div class="eyebrow" style="color:#ffd7df;">Testimonials</div>
@@ -1273,119 +1120,38 @@
       <div class="marquee-wrap">
         <div class="marquee">
           <div class="track">
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Clean, calm, and exactly what I needed after a long week. The pressure was perfect.”</p>
-              <strong>— Amanda R.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The foot massage helped so much after standing all day. Very relaxing and comfortable.”</p>
-              <strong>— Kevin L.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Quiet rooms, easy parking, and a peaceful feeling from start to finish.”</p>
-              <strong>— Melissa T.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“I booked a body massage and left feeling lighter. Great place to reset.”</p>
-              <strong>— Daniel W.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The combo massage was a great choice. My back and feet both felt refreshed.”</p>
-              <strong>— Sarah M.</strong>
-            </article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Clean, calm, and exactly what I needed after a long week. The pressure was perfect.”</p><strong>— Amanda R.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The foot massage helped so much after standing all day. Very relaxing and comfortable.”</p><strong>— Kevin L.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Quiet rooms, easy parking, and a peaceful feeling from start to finish.”</p><strong>— Melissa T.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“I booked a body massage and left feeling lighter. Great place to reset.”</p><strong>— Daniel W.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The combo massage was a great choice. My back and feet both felt refreshed.”</p><strong>— Sarah M.</strong></article>
 
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Clean, calm, and exactly what I needed after a long week. The pressure was perfect.”</p>
-              <strong>— Amanda R.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The foot massage helped so much after standing all day. Very relaxing and comfortable.”</p>
-              <strong>— Kevin L.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Quiet rooms, easy parking, and a peaceful feeling from start to finish.”</p>
-              <strong>— Melissa T.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“I booked a body massage and left feeling lighter. Great place to reset.”</p>
-              <strong>— Daniel W.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The combo massage was a great choice. My back and feet both felt refreshed.”</p>
-              <strong>— Sarah M.</strong>
-            </article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Clean, calm, and exactly what I needed after a long week. The pressure was perfect.”</p><strong>— Amanda R.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The foot massage helped so much after standing all day. Very relaxing and comfortable.”</p><strong>— Kevin L.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Quiet rooms, easy parking, and a peaceful feeling from start to finish.”</p><strong>— Melissa T.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“I booked a body massage and left feeling lighter. Great place to reset.”</p><strong>— Daniel W.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The combo massage was a great choice. My back and feet both felt refreshed.”</p><strong>— Sarah M.</strong></article>
           </div>
         </div>
 
         <div class="marquee">
           <div class="track reverse">
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Very soothing environment. I appreciated how private and peaceful the room felt.”</p>
-              <strong>— Jason P.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The cupping massage helped release tension in my shoulders. I would come back.”</p>
-              <strong>— Olivia C.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Nice atmosphere, fair prices, and a very relaxing session.”</p>
-              <strong>— Brian H.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The 4 hands massage was deeply calming. It felt smooth and synchronized.”</p>
-              <strong>— Natalie S.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“I came in stressed and left feeling completely relaxed. Great local spa.”</p>
-              <strong>— Mark D.</strong>
-            </article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Very soothing environment. I appreciated how private and peaceful the room felt.”</p><strong>— Jason P.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The cupping massage helped release tension in my shoulders. I would come back.”</p><strong>— Olivia C.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Nice atmosphere, fair prices, and a very relaxing session.”</p><strong>— Brian H.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The 4 hands massage was deeply calming. It felt smooth and synchronized.”</p><strong>— Natalie S.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“I came in stressed and left feeling completely relaxed. Great local spa.”</p><strong>— Mark D.</strong></article>
 
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Very soothing environment. I appreciated how private and peaceful the room felt.”</p>
-              <strong>— Jason P.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The cupping massage helped release tension in my shoulders. I would come back.”</p>
-              <strong>— Olivia C.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“Nice atmosphere, fair prices, and a very relaxing session.”</p>
-              <strong>— Brian H.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“The 4 hands massage was deeply calming. It felt smooth and synchronized.”</p>
-              <strong>— Natalie S.</strong>
-            </article>
-            <article class="review-card">
-              <div class="stars">★★★★★</div>
-              <p>“I came in stressed and left feeling completely relaxed. Great local spa.”</p>
-              <strong>— Mark D.</strong>
-            </article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Very soothing environment. I appreciated how private and peaceful the room felt.”</p><strong>— Jason P.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The cupping massage helped release tension in my shoulders. I would come back.”</p><strong>— Olivia C.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“Nice atmosphere, fair prices, and a very relaxing session.”</p><strong>— Brian H.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“The 4 hands massage was deeply calming. It felt smooth and synchronized.”</p><strong>— Natalie S.</strong></article>
+            <article class="review-card"><div class="stars">★★★★★</div><p>“I came in stressed and left feeling completely relaxed. Great local spa.”</p><strong>— Mark D.</strong></article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQs -->
     <section class="section" id="faq">
       <div class="container faq-grid">
         <div>
@@ -1440,7 +1206,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section class="section contact" id="contact">
       <div class="container">
         <div class="eyebrow">Contact & Location</div>
@@ -1471,11 +1236,11 @@
             </div>
 
             <div style="margin-top:24px;">
-              <a class="btn" href="tel:+17755129269">Call Now</a>
+              <a class="btn" href="tel:+17755129269">Call to Book</a>
             </div>
           </div>
 
-          <div class="map" aria-label="Google Map location for Massage Spa">
+          <div class="map">
             <iframe
               src="https://www.google.com/maps?q=6490%20S.%20McCarran%20Blvd%2C%20Bldg%20DI%20%2333%2C%20Reno%2C%20NV%2089509&amp;output=embed"
               loading="lazy"
@@ -1495,7 +1260,6 @@
   </footer>
 
   <script>
-    // Mobile navigation
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".nav");
 
@@ -1509,7 +1273,6 @@
       });
     });
 
-    // Generic carousel helper
     function startCarousel(container, itemSelector, interval) {
       if (!container) return;
 
@@ -1525,15 +1288,12 @@
       }, interval);
     }
 
-    // Hero carousel
     startCarousel(document.querySelector(".hero-slides"), ".hero-slide", 4800);
 
-    // Service carousels
     document.querySelectorAll(".service-slider").forEach((slider, i) => {
       startCarousel(slider, "img", 3200 + i * 300);
     });
 
-    // FAQ accordion
     document.querySelectorAll(".faq-question").forEach((button) => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
@@ -1551,17 +1311,6 @@
       });
     });
 
-    // Booking form demo behavior
-    const bookingForm = document.getElementById("bookingForm");
-
-    bookingForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      alert("Thank you! Your booking request is ready. Please call (775) 512-9269 to confirm your appointment.");
-      bookingForm.reset();
-    });
-
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
