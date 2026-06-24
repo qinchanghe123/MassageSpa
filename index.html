@@ -1,532 +1,1568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEMSTONE SPA - Philadelphia</title>
-    <meta name="description" content="Best Massage and Spa in Philadelphia. Relax and unwind at GEMSTONE SPA.">
-    <style>
-        /* --- CSS Reset & Variables --- */
-        :root {
-            --primary-color: #00b894;
-            --gold-color: #d4af37;
-            --bg-dark: #101514;
-            --bg-card: #1b2422;
-            --text-light: #f0f0f0;
-            --text-gray: #aaaaaa;
-            --success: #4caf50;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Massage Spa | Reno, NV</title>
+  <meta name="description" content="Massage Spa in Reno, NV. Relaxing foot reflexology, body massage, combo massage, 4 hands massage, and cupping massage." />
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    :root {
+      --bg: #fff8f5;
+      --cream: #fffaf6;
+      --rose: #d95f7a;
+      --rose-dark: #a63d59;
+      --brown: #5a3a2e;
+      --muted: #7a6a63;
+      --gold: #c69b62;
+      --shadow: 0 18px 50px rgba(90, 58, 46, 0.16);
+      --radius: 24px;
+      --max: 1180px;
+    }
 
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        ul {
-            list-style: none;
-        }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--brown);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
 
-        /* --- Utilities --- */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: var(--gold-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 10px auto 0;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(45deg, var(--primary-color), #00856b);
-            color: white;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.35);
-        }
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 184, 148, 0.55);
-        }
+    .section {
+      padding: 96px 0;
+      scroll-margin-top: 90px;
+    }
 
-        /* --- Header --- */
-        header {
-            background-color: rgba(16, 21, 20, 0.95);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #2a3633;
-            backdrop-filter: blur(10px);
-        }
+    .eyebrow {
+      color: var(--rose);
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
 
-        .nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+      color: var(--brown);
+    }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold-color);
-            letter-spacing: 2px;
-        }
+    .section-lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      background: var(--rose);
+      color: white;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      box-shadow: 0 12px 30px rgba(217, 95, 122, 0.34);
+      transition: 0.25s ease;
+    }
 
-        .nav-links a {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            color: var(--text-light);
-        }
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--rose-dark);
+    }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      box-shadow: none;
+      backdrop-filter: blur(8px);
+    }
 
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+    .btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
 
-        /* --- Hero Section --- */
-        .hero {
-            height: 60vh;
-            background: radial-gradient(circle at center, #24322f 0%, #101514 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            border-bottom: 1px solid #2a3633;
-        }
+    /* Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+      background: rgba(255, 248, 245, 0.84);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(90, 58, 46, 0.08);
+    }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: var(--gold-color);
-            text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.3);
-        }
+    .header-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #ddd;
-        }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      font-weight: 900;
+      color: var(--brown);
+      font-size: 1.12rem;
+    }
 
-        /* --- Introduction Sections --- */
-        .intro-section {
-            padding: 60px 0;
-            background-color: #151d1b;
-            border-bottom: 1px solid #22302d;
-        }
+    .logo span {
+      font-size: 0.72rem;
+      color: var(--rose);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: flex-start;
-        }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
 
-        .intro-text h2 {
-            font-size: 2rem;
-            color: var(--text-light);
-            margin-bottom: 20px;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-        }
-        
-        .intro-text p {
-            color: var(--text-gray);
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-            text-align: justify;
-        }
+    .nav a:hover {
+      color: var(--rose);
+    }
 
-        .why-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
+    .nav .nav-book {
+      padding: 10px 18px;
+      background: var(--rose);
+      color: white;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(217, 95, 122, 0.28);
+    }
 
-        .why-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            text-align: justify;
-        }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: white;
+      color: var(--brown);
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 8px 20px rgba(90, 58, 46, 0.1);
+      cursor: pointer;
+      font-weight: 900;
+    }
 
-        .why-list li::before {
-            content: '💎';
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: var(--primary-color);
-            font-size: 1rem;
-        }
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: grid;
+      place-items: center;
+      color: white;
+      overflow: hidden;
+    }
 
-        .features-grid {
-            display: none;
-        }
+    .hero-slides,
+    .hero-slide,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+    }
 
-        /* --- Girls/Staff Section: Waterfall Layout --- */
-        .staff-section {
-            padding: 80px 0;
-            background-color: var(--bg-dark);
-        }
+    .hero-slide {
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.06);
+      transition: opacity 1.2s ease, transform 5s ease;
+    }
 
-        .staff-masonry {
-            column-count: 3;
-            column-gap: 24px;
-        }
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
 
-        .masonry-item {
-            display: inline-block;
-            width: 100%;
-            margin: 0 0 24px;
-            background-color: var(--bg-card);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #2c3c38;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-            break-inside: avoid;
-            -webkit-column-break-inside: avoid;
-            page-break-inside: avoid;
-        }
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(49, 29, 23, 0.72), rgba(49, 29, 23, 0.38), rgba(49, 29, 23, 0.58)),
+        radial-gradient(circle at 20% 50%, rgba(217, 95, 122, 0.28), transparent 34%);
+      z-index: 1;
+    }
 
-        .masonry-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 36px rgba(0,0,0,0.45);
-        }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(100% - 32px, 960px);
+      padding-top: 76px;
+    }
 
-        .masonry-item img {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            background-color: #333;
-        }
+    .hero-card {
+      max-width: 720px;
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    }
 
-        .emoji-divider {
-            text-align: center;
-            font-size: 1.5rem;
-            margin: 20px 0;
-            opacity: 0.7;
-        }
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
+    }
 
-        /* --- Info & Payments --- */
-        .info-section {
-            padding: 80px 0;
-            background: var(--bg-dark);
-        }
+    .hero p {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
 
-        .info-box {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 15px;
-            height: 100%;
-        }
+    .hero-info {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
 
-        .info-item {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .info-icon {
-            font-size: 1.2rem;
-            color: var(--gold-color);
-            margin-top: 3px;
-        }
+    .hero-info span {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+    }
 
-        .payment-methods {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
 
-        .pay-badge {
-            background: #263330;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            border: 1px solid #344843;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .map-container {
-            width: 100%;
-            height: 250px;
-            margin-top: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #2c3c38;
-        }
+    .about-panel {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: clamp(26px, 4vw, 44px);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(90, 58, 46, 0.08);
+    }
 
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+    .about-features {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
 
-        /* --- Footer --- */
-        footer {
-            background: #000;
-            padding: 30px 0;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            border-top: 1px solid #222;
-        }
+    .feature {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      background: white;
+      border-radius: 18px;
+      border: 1px solid rgba(90, 58, 46, 0.07);
+    }
 
-        /* --- Responsive --- */
-        @media (max-width: 992px) {
-            .staff-masonry {
-                column-count: 2;
-            }
-        }
+    .feature-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: rgba(217, 95, 122, 0.12);
+      color: var(--rose);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+    }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+    .feature h3 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
 
-            .mobile-menu-btn {
-                display: block;
-            }
+    .feature p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
+    .about-visual {
+      min-height: 520px;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+      background:
+        linear-gradient(rgba(90, 58, 46, 0.1), rgba(90, 58, 46, 0.2)),
+        url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg") center/cover;
+    }
 
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
+    .about-visual::after {
+      content: "Clean • Quiet • Private";
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      padding: 14px 18px;
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--brown);
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+    }
 
-            .intro-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
+    /* Services */
+    .services {
+      background:
+        linear-gradient(180deg, #fff8f5 0%, #fff1ec 100%);
+    }
 
-        @media (max-width: 560px) {
-            .staff-masonry {
-                column-count: 1;
-            }
+    .services-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
 
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(90, 58, 46, 0.08);
+    }
+
+    .service-slider {
+      height: 286px;
+      position: relative;
+      overflow: hidden;
+      background: #eadbd3;
+    }
+
+    .service-slider img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1.04);
+      transition: opacity 0.8s ease, transform 3.8s ease;
+    }
+
+    .service-slider img.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .service-content {
+      padding: 28px;
+    }
+
+    .service-topline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .service-content h3 {
+      font-size: 1.55rem;
+      line-height: 1.15;
+    }
+
+    .price-range {
+      color: var(--rose);
+      font-size: 1.05rem;
+      font-weight: 900;
+      padding: 6px 12px;
+      background: rgba(217, 95, 122, 0.11);
+      border-radius: 999px;
+    }
+
+    .service-desc {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      font-size: 0.94rem;
+    }
+
+    .price-table tr {
+      border-bottom: 1px solid rgba(90, 58, 46, 0.08);
+    }
+
+    .price-table tr:last-child {
+      border-bottom: 0;
+    }
+
+    .price-table td {
+      padding: 12px 10px;
+      vertical-align: top;
+    }
+
+    .price-table td:first-child {
+      font-weight: 900;
+      color: var(--brown);
+      width: 90px;
+    }
+
+    .price-table td:last-child {
+      text-align: right;
+      font-weight: 900;
+      color: var(--rose-dark);
+      white-space: nowrap;
+    }
+
+    .price-table small {
+      display: block;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
+    /* Booking */
+    .booking {
+      background:
+        radial-gradient(circle at 10% 0%, rgba(217, 95, 122, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(198, 155, 98, 0.18), transparent 32%),
+        var(--cream);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .booking-card,
+    .booking-form {
+      background: white;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(90, 58, 46, 0.08);
+      padding: clamp(24px, 4vw, 38px);
+    }
+
+    .booking-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .booking-list {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .booking-list p {
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff8f5;
+      color: var(--muted);
+    }
+
+    .booking-list strong {
+      color: var(--brown);
+      display: block;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(90, 58, 46, 0.15);
+      border-radius: 16px;
+      padding: 13px 14px;
+      background: #fffaf7;
+      color: var(--brown);
+      font: inherit;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(217, 95, 122, 0.12);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    /* Testimonials */
+    .reviews {
+      background: #3b261f;
+      color: white;
+      overflow: hidden;
+    }
+
+    .reviews .section-title {
+      color: white;
+    }
+
+    .reviews .section-lead {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .marquee-wrap {
+      display: grid;
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .marquee {
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .track {
+      display: flex;
+      width: max-content;
+      gap: 18px;
+      animation: scroll-left 42s linear infinite;
+    }
+
+    .track.reverse {
+      animation-name: scroll-right;
+    }
+
+    .review-card {
+      width: 330px;
+      min-height: 166px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+    }
+
+    .stars {
+      color: #ffd37a;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.96rem;
+      margin-bottom: 14px;
+    }
+
+    .review-card strong {
+      color: white;
+    }
+
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes scroll-right {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(90, 58, 46, 0.09);
+      border: 1px solid rgba(90, 58, 46, 0.08);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: var(--brown);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font: inherit;
+      font-weight: 900;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(217, 95, 122, 0.12);
+      color: var(--rose);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      transition: 0.25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 22px 22px;
+      color: var(--muted);
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 180px;
+    }
+
+    .faq-item.open .faq-question span {
+      transform: rotate(45deg);
+      background: var(--rose);
+      color: white;
+    }
+
+    /* Contact */
+    .contact {
+      background: #fff1ec;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 28px;
+      padding: clamp(24px, 4vw, 38px);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(90, 58, 46, 0.08);
+    }
+
+    .contact-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+    }
+
+    .contact-detail {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-detail div {
+      padding: 18px;
+      border-radius: 18px;
+      background: #fff8f5;
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-detail p,
+    .contact-detail a {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .map {
+      min-height: 470px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(90, 58, 46, 0.08);
+      background: white;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      border: 0;
+    }
+
+    footer {
+      padding: 28px 0;
+      background: #2d1d18;
+      color: rgba(255, 255, 255, 0.72);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 940px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav {
+        position: absolute;
+        top: 76px;
+        left: 16px;
+        right: 16px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(255, 250, 246, 0.97);
+        border: 1px solid rgba(90, 58, 46, 0.1);
+        border-radius: 22px;
+        padding: 12px;
+        box-shadow: var(--shadow);
+        transform: translateY(-16px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s ease;
+      }
+
+      .nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav a {
+        padding: 13px 14px;
+        border-radius: 14px;
+      }
+
+      .nav a:hover {
+        background: #fff1ec;
+      }
+
+      .nav .nav-book {
+        text-align: center;
+        margin-top: 6px;
+      }
+
+      .about-grid,
+      .booking-grid,
+      .faq-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-head {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .about-visual {
+        min-height: 380px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero-card {
+        border-radius: 26px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-slider {
+        height: 230px;
+      }
+
+      .review-card {
+        width: 286px;
+      }
+
+      .price-table td {
+        display: block;
+        width: 100%;
+        text-align: left !important;
+        padding: 7px 0;
+      }
+
+      .price-table tr {
+        display: grid;
+        padding: 12px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Massage Spa Home">
+        Massage Spa
+        <span>Reno Relaxation</span>
+      </a>
 
-    <!-- Header -->
-    <header>
-        <div class="container nav-flex">
-            <div class="logo">GEMSTONE SPA</div>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#staff">Girls</a>
-                <a href="#info">Contact</a>
-                <a href="tel:+12673078655" style="color:var(--primary-color);">(267) 307-8655</a>
-            </nav>
-            <div class="mobile-menu-btn" onclick="alert('Please scroll down for info')">☰</div>
-        </div>
-    </header>
+      <button class="menu-toggle" type="button" aria-label="Open navigation">Menu</button>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Relax & Rejuvenate</h1>
-            <p>6650 Frankford Ave, Philadelphia, PA 19135</p>
-            <div style="margin-bottom: 20px; font-weight: bold; color: var(--gold-color);">
-                OPEN: 10:00 AM - 2:00 AM
-            </div>
-            <a href="tel:+12673078655" class="btn">Call (267) 307-8655</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-book" href="#booking">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section class="hero" id="home">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active" style="background-image:url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-card">
+          <div class="eyebrow" style="color:#ffd7df;">Relax. Restore. Renew.</div>
+          <h1>Professional Massage in a Calm Private Space</h1>
+          <p>
+            Step away from stress and enjoy a quiet, clean, and relaxing spa experience designed to help your body unwind.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#booking">Book Now</a>
+            <a class="btn secondary" href="tel:+17755129269">Call (775) 512-9269</a>
+          </div>
+
+          <div class="hero-info">
+            <span>Open 9:00 AM - 10:30 PM</span>
+            <span>Reno, NV 89509</span>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Who We Are & Why Choose Us -->
-    <section id="about" class="intro-section">
-        <div class="container">
-            <div class="intro-grid">
-                <div class="intro-text">
-                    <h2>Who We Are</h2>
-                    <p>
-                        <strong>GEMSTONE SPA</strong> Is An All-In-One "Asian Fusion Men's Super Club" With Specialty On Elite Companionship & Nuru Massage & Men's SPA. We Have At Least 9 Professional Angels At Single Place Lineup For You To Choose From.
-                    </p>
-                    <p>
-                        All Strictly Selected Beauty Pros Are Rotated By Shift Every Week, They Come From Different Countries All Over The World - "Asian" + "European" + "Latino" + "American Domestic" + "Mix Blood"! We're Committed To Develop The Best Companionship & Nuru Massage Techniques & Men's Prostate Health Spa Skills. We're Dedicated To Interpret The Best Fusion Culture Into The Fabulous Way!
-                    </p>
-                </div>
+    <!-- About Us -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <div class="eyebrow">About Us</div>
+          <h2 class="section-title">A quiet place made for deep relaxation.</h2>
+          <p class="section-lead">
+            Massage Spa is designed as a peaceful escape with clean rooms, a private atmosphere, and a calming environment. Every detail is focused on helping guests feel comfortable, relaxed, and refreshed from the moment they arrive.
+          </p>
 
-                <div>
-                    <h2 style="font-size: 1.5rem; color: #fff; margin-bottom: 20px; text-align: center;">Why Choose Us</h2>
-                    
-                    <p style="margin-bottom: 15px; color: #fff; font-style: italic; text-align: center; border-bottom: 1px solid #333; padding-bottom: 10px;">
-                        Dedication Of Samurai Spirit ( Bushido Culture ) Coming Along With "GEMSTONE SPA" As Always! This Is The Highest State Of Service In The World! No Others Can Be Mentioned In The Same Breath!
-                    </p>
-
-                    <ul class="why-list">
-                        <li>
-                            At Here, You’ll Get The Most Choices Of High-End & Up-Scale Talented Angels, Which You’ll Never Be Able To Get So Many Great Choices Of Hotties From Other Regular Places In Philadelphia!
-                        </li>
-                        <li>
-                            We Change New Angels Very Frequently! That Means All GEMSTONE SPA Angels Will Be Replaced With Brand New Ones In Just Few Days! You Will Get The Freshest And Newest Ones For Sure!
-                        </li>
-                        <li>
-                            At Here, We Prepare Five Race Groups Of The Selected Angels! Not Boring Any More! The Taste Is Being Diversified! We Offer “Asian Group”; “Hispanic Group”; “European Group”; “American Domestic Group”; "Mix Blood Group".
-                        </li>
-                        <li>
-                            Our Place Is The Only One “Fictitious Land Of Peace” In Philadelphia! No Bothering! No Interference! No Hurry! No Concern! Feel like Timeless & Spaceless! All You Need To Do Is ENJOY!
-                        </li>
-                    </ul>
-                </div>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">✦</div>
+              <div>
+                <h3>Clean Environment</h3>
+                <p>Fresh, tidy treatment spaces prepared for a comfortable spa visit.</p>
+              </div>
             </div>
+
+            <div class="feature">
+              <div class="feature-icon">◐</div>
+              <div>
+                <h3>Private Rooms</h3>
+                <p>A calm setting where you can fully relax without distraction.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">♨</div>
+              <div>
+                <h3>Relaxation First</h3>
+                <p>Thoughtful service options for tired muscles, daily stress, and full-body renewal.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="about-visual" aria-label="Quiet massage room atmosphere"></div>
+      </div>
     </section>
 
-    <!-- Staff Section / Only Image Waterfall -->
-    <section id="staff" class="staff-section">
-        <div class="container">
-            <h2 class="section-title">Our Ladies</h2>
-
-            <div class="staff-masonry">
-                <div class="masonry-item">
-                    <img src="1.jpg" alt="Our Ladies 1" onerror="this.src='https://via.placeholder.com/400x600/333/fff?text=1.jpg+Missing'">
-                </div>
-
-                <div class="masonry-item">
-                    <img src="2.jpg" alt="Our Ladies 2" onerror="this.src='https://via.placeholder.com/400x600/333/fff?text=2.jpg+Missing'">
-                </div>
-
-                <div class="masonry-item">
-                    <img src="3.jpg" alt="Our Ladies 3" onerror="this.src='https://via.placeholder.com/400x600/333/fff?text=3.jpg+Missing'">
-                </div>
-            </div>
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="services-head">
+          <div>
+            <div class="eyebrow">Services & Pricing</div>
+            <h2 class="section-title">Choose your relaxation session.</h2>
+            <p class="section-lead">
+              Pricing is based on the in-store menu. Please call to confirm availability before visiting.
+            </p>
+          </div>
+          <a class="btn" href="#booking">Book a Session</a>
         </div>
+
+        <div class="service-grid">
+          <!-- Foot Reflexology -->
+          <article class="service-card">
+            <div class="service-slider">
+              <img class="active" src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Foot reflexology massage" />
+              <img src="https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg" alt="Relaxing foot massage" />
+              <img src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg" alt="Foot reflexology spa service" />
+              <img src="https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg" alt="Foot massage treatment" />
+            </div>
+            <div class="service-content">
+              <div class="service-topline">
+                <h3>Foot Reflexology</h3>
+                <span class="price-range">$50 - $80</span>
+              </div>
+              <p class="service-desc">
+                Ideal for tired feet, long workdays, and anyone who wants focused relaxation from the soles upward.
+              </p>
+              <table class="price-table">
+                <tr>
+                  <td>30 Min</td>
+                  <td>Foot Massage</td>
+                  <td>$50</td>
+                </tr>
+                <tr>
+                  <td>60 Min</td>
+                  <td>Signature Foot Massage</td>
+                  <td>$65</td>
+                </tr>
+                <tr>
+                  <td>90 Min</td>
+                  <td>Foot Massage</td>
+                  <td>$80</td>
+                </tr>
+              </table>
+            </div>
+          </article>
+
+          <!-- Combo Massage -->
+          <article class="service-card">
+            <div class="service-slider">
+              <img class="active" src="https://balizen.ro/_astro/balizen_118.C9mVKzan.jpg" alt="Body massage portion of combo massage" />
+              <img src="https://balizen.ro/_astro/balizen_39.BZouHQNH.jpg" alt="Foot massage portion of combo massage" />
+              <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Relaxing body massage" />
+            </div>
+            <div class="service-content">
+              <div class="service-topline">
+                <h3>Combo Massage</h3>
+                <span class="price-range">$70 - $135</span>
+              </div>
+              <p class="service-desc">
+                A balanced session combining body massage and foot massage, great for full refreshment and head-to-toe relaxation.
+              </p>
+              <table class="price-table">
+                <tr>
+                  <td>60 Min</td>
+                  <td>Combo Massage <small>Body Massage and Foot Massage</small></td>
+                  <td>$70</td>
+                </tr>
+                <tr>
+                  <td>90 Min</td>
+                  <td>Combo Massage <small>Body Massage and Foot Massage</small></td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>2 Hours</td>
+                  <td>Combo Massage <small>Body Massage and Foot Massage</small></td>
+                  <td>$135</td>
+                </tr>
+              </table>
+            </div>
+          </article>
+
+          <!-- Body Massage -->
+          <article class="service-card">
+            <div class="service-slider">
+              <img class="active" src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg" alt="Body massage spa treatment" />
+              <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Professional body massage" />
+              <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Relaxing full body massage" />
+              <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Deep tissue style body massage" />
+            </div>
+            <div class="service-content">
+              <div class="service-topline">
+                <h3>Body Massage</h3>
+                <span class="price-range">$50 - $140</span>
+              </div>
+              <p class="service-desc">
+                Choose Swedish or Deep Tissue style pressure to ease stiffness, daily tension, and stress. Select longer sessions for more complete relaxation.
+              </p>
+              <table class="price-table">
+                <tr>
+                  <td>30 Min</td>
+                  <td>Swedish or Deep Tissue</td>
+                  <td>$50</td>
+                </tr>
+                <tr>
+                  <td>60 Min</td>
+                  <td>Signature Massage <small>Swedish or Deep Tissue + FREE Hot Stone</small></td>
+                  <td>$70</td>
+                </tr>
+                <tr>
+                  <td>90 Min</td>
+                  <td>Full Body Massage <small>Swedish or Deep Tissue + FREE Hot Stone</small></td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>90 Min</td>
+                  <td>Full Body Massage <small>Swedish or Deep Tissue + FREE Hot Stone</small></td>
+                  <td>$125</td>
+                </tr>
+                <tr>
+                  <td>2 Hours</td>
+                  <td>Full Body Massage <small>Swedish or Deep Tissue + FREE Hot Stone</small></td>
+                  <td>$140</td>
+                </tr>
+              </table>
+            </div>
+          </article>
+
+          <!-- 4 Hands Massage -->
+          <article class="service-card">
+            <div class="service-slider">
+              <img class="active" src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg" alt="4 hands massage" />
+              <img src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg" alt="Four hands synchronized massage" />
+              <img src="https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg" alt="4 hands spa massage" />
+            </div>
+            <div class="service-content">
+              <div class="service-topline">
+                <h3>4 Hands Massage</h3>
+                <span class="price-range">$145</span>
+              </div>
+              <p class="service-desc">
+                A deeply relaxing synchronized massage experience for guests who want a fuller, more immersive bodywork session.
+              </p>
+              <table class="price-table">
+                <tr>
+                  <td>Call</td>
+                  <td>4 Hands Massage <small>Two therapists work on one client + FREE Hot Stone</small></td>
+                  <td>$145</td>
+                </tr>
+              </table>
+            </div>
+          </article>
+
+          <!-- Cupping Massage -->
+          <article class="service-card">
+            <div class="service-slider">
+              <img class="active" src="https://balizen.ro/_astro/balizen_ventuze.DhSQrenQ.jpg" alt="Cupping massage treatment" />
+            </div>
+            <div class="service-content">
+              <div class="service-topline">
+                <h3>Cupping Massage</h3>
+                <span class="price-range">$145 - $155</span>
+              </div>
+              <p class="service-desc">
+                Designed for stubborn muscle tension and deep release. This service includes Chinese White Flower Oil and FREE Hot Stone.
+              </p>
+              <table class="price-table">
+                <tr>
+                  <td>70 Min</td>
+                  <td>Cupping Massage <small>With Chinese White Flower Oil + FREE Hot Stone</small></td>
+                  <td>$145</td>
+                </tr>
+                <tr>
+                  <td>90 Min</td>
+                  <td>Cupping Massage <small>With Chinese White Flower Oil + FREE Hot Stone</small></td>
+                  <td>$155</td>
+                </tr>
+              </table>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Info Section with MAP -->
-    <section id="info" class="info-section">
-        <div class="container">
-            <div class="info-grid">
-                
-                <div class="info-box">
-                    <h3 style="color:white; margin-bottom:20px;">Visit Us</h3>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">📍</div>
-                        <div>
-                            <strong>Address:</strong><br>
-                            6650 Frankford Ave,<br>Philadelphia, PA 19135
-                        </div>
-                    </div>
+    <!-- Booking -->
+    <section class="section booking" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-card">
+          <div class="eyebrow">Book Now</div>
+          <h2 class="section-title">Ready to relax?</h2>
+          <p class="section-lead">
+            Send a booking request or call directly for the fastest confirmation.
+          </p>
 
-                    <div class="map-container">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=6650+Frankford+Ave,+Philadelphia,+PA+19135&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+          <div class="booking-list">
+            <p>
+              <strong>Phone</strong>
+              <a href="tel:+17755129269">(775) 512-9269</a>
+            </p>
+            <p>
+              <strong>Hours</strong>
+              9:00 AM - 10:30 PM
+            </p>
+            <p>
+              <strong>Address</strong>
+              6490 S. McCarran Blvd., Bldg. DI #33, Reno, NV 89509
+            </p>
+          </div>
 
-                    <div class="info-item" style="margin-top: 20px;">
-                        <div class="info-icon">📞</div>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:+12673078655" style="color:var(--primary-color); font-weight:bold; font-size:1.2rem;">(267) 307-8655</a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">🕒</div>
-                        <div>
-                            <strong>Business Hours:</strong><br>
-                            10:00 AM - 2:00 AM Daily
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <h3 style="color:white; margin-bottom:20px;">We Accept</h3>
-                    <div class="payment-methods">
-                        <div class="pay-badge">💵 Cash</div>
-                        <div class="pay-badge">📱 Zelle</div>
-                        <div class="pay-badge">💸 Cash App</div>
-                        <div class="pay-badge">🍏 Apple Pay</div>
-                        <div class="pay-badge">💳 Credit Card</div>
-                    </div>
-                    <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">
-                        Secure and discreet payments available.
-                    </p>
-                </div>
-
-            </div>
+          <a class="btn" href="tel:+17755129269">Call to Book</a>
         </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
+            </div>
+
+            <div class="field">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Foot Reflexology</option>
+                <option>Combo Massage</option>
+                <option>Body Massage</option>
+                <option>4 Hands Massage</option>
+                <option>Cupping Massage</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="time">Preferred Time</label>
+              <input id="time" name="time" type="text" placeholder="Example: Today 6 PM" />
+            </div>
+
+            <div class="field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Preferred duration, pressure, or questions"></textarea>
+            </div>
+
+            <div class="field full">
+              <button class="btn" type="submit">Submit Request</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 GEMSTONE SPA Philadelphia. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Reviews -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="eyebrow" style="color:#ffd7df;">Testimonials</div>
+        <h2 class="section-title">What guests are saying.</h2>
+        <p class="section-lead">
+          Relaxed atmosphere, clean rooms, and service options for everyday stress relief.
+        </p>
+      </div>
 
+      <div class="marquee-wrap">
+        <div class="marquee">
+          <div class="track">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Clean, calm, and exactly what I needed after a long week. The pressure was perfect.”</p>
+              <strong>— Amanda R.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The foot massage helped so much after standing all day. Very relaxing and comfortable.”</p>
+              <strong>— Kevin L.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Quiet rooms, easy parking, and a peaceful feeling from start to finish.”</p>
+              <strong>— Melissa T.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“I booked a body massage and left feeling lighter. Great place to reset.”</p>
+              <strong>— Daniel W.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The combo massage was a great choice. My back and feet both felt refreshed.”</p>
+              <strong>— Sarah M.</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Clean, calm, and exactly what I needed after a long week. The pressure was perfect.”</p>
+              <strong>— Amanda R.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The foot massage helped so much after standing all day. Very relaxing and comfortable.”</p>
+              <strong>— Kevin L.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Quiet rooms, easy parking, and a peaceful feeling from start to finish.”</p>
+              <strong>— Melissa T.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“I booked a body massage and left feeling lighter. Great place to reset.”</p>
+              <strong>— Daniel W.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The combo massage was a great choice. My back and feet both felt refreshed.”</p>
+              <strong>— Sarah M.</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="marquee">
+          <div class="track reverse">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Very soothing environment. I appreciated how private and peaceful the room felt.”</p>
+              <strong>— Jason P.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The cupping massage helped release tension in my shoulders. I would come back.”</p>
+              <strong>— Olivia C.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Nice atmosphere, fair prices, and a very relaxing session.”</p>
+              <strong>— Brian H.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The 4 hands massage was deeply calming. It felt smooth and synchronized.”</p>
+              <strong>— Natalie S.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“I came in stressed and left feeling completely relaxed. Great local spa.”</p>
+              <strong>— Mark D.</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Very soothing environment. I appreciated how private and peaceful the room felt.”</p>
+              <strong>— Jason P.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The cupping massage helped release tension in my shoulders. I would come back.”</p>
+              <strong>— Olivia C.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Nice atmosphere, fair prices, and a very relaxing session.”</p>
+              <strong>— Brian H.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The 4 hands massage was deeply calming. It felt smooth and synchronized.”</p>
+              <strong>— Natalie S.</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“I came in stressed and left feeling completely relaxed. Great local spa.”</p>
+              <strong>— Mark D.</strong>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <div class="eyebrow">FAQs</div>
+          <h2 class="section-title">Common questions before your visit.</h2>
+          <p class="section-lead">
+            A few simple notes to help you feel prepared and comfortable before your appointment.
+          </p>
+        </div>
+
+        <div class="accordion">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              How early should I arrive?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please arrive about 5 to 10 minutes early so you have time to check in, choose your service, and relax before the session begins.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Can I get a massage if I have an injury?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please let the spa know before booking. For recent injuries, serious pain, or medical conditions, check with your healthcare provider first.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What is your cancellation policy?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Please call as soon as possible if you need to cancel or reschedule, so the appointment time can be made available to another guest.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Is there parking available?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Parking is available around the shopping/business plaza. Please allow a few extra minutes during busy hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">Contact & Location</div>
+        <h2 class="section-title">Visit Massage Spa in Reno.</h2>
+        <p class="section-lead">
+          Call ahead for same-day availability or use the map below to find the spa.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Massage Spa</h3>
+
+            <div class="contact-detail">
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+17755129269">(775) 512-9269</a>
+              </div>
+
+              <div>
+                <strong>Business Hours</strong>
+                <p>9:00 AM - 10:30 PM</p>
+              </div>
+
+              <div>
+                <strong>Address</strong>
+                <p>6490 S. McCarran Blvd., Bldg. DI #33, Reno, NV 89509</p>
+              </div>
+            </div>
+
+            <div style="margin-top:24px;">
+              <a class="btn" href="tel:+17755129269">Call Now</a>
+            </div>
+          </div>
+
+          <div class="map" aria-label="Google Map location for Massage Spa">
+            <iframe
+              src="https://www.google.com/maps?q=6490%20S.%20McCarran%20Blvd%2C%20Bldg%20DI%20%2333%2C%20Reno%2C%20NV%2089509&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Massage Spa. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+      });
+    });
+
+    // Generic carousel helper
+    function startCarousel(container, itemSelector, interval) {
+      if (!container) return;
+
+      const items = Array.from(container.querySelectorAll(itemSelector));
+      if (items.length <= 1) return;
+
+      let index = 0;
+
+      setInterval(() => {
+        items[index].classList.remove("active");
+        index = (index + 1) % items.length;
+        items[index].classList.add("active");
+      }, interval);
+    }
+
+    // Hero carousel
+    startCarousel(document.querySelector(".hero-slides"), ".hero-slide", 4800);
+
+    // Service carousels
+    document.querySelectorAll(".service-slider").forEach((slider, i) => {
+      startCarousel(slider, "img", 3200 + i * 300);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+
+        document.querySelectorAll(".faq-item").forEach((faq) => {
+          faq.classList.remove("open");
+          faq.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+        });
+
+        if (!isOpen) {
+          item.classList.add("open");
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // Booking form demo behavior
+    const bookingForm = document.getElementById("bookingForm");
+
+    bookingForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      alert("Thank you! Your booking request is ready. Please call (775) 512-9269 to confirm your appointment.");
+      bookingForm.reset();
+    });
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
