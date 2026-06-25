@@ -80,7 +80,8 @@
       font-size: 1.06rem;
     }
 
-    .btn {
+    .btn,
+    .book-now-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -92,15 +93,48 @@
       cursor: pointer;
       background: var(--rose);
       color: white;
+      font-family: inherit;
+      font-size: 0.95rem;
       font-weight: 800;
+      line-height: 1;
       letter-spacing: 0.02em;
       box-shadow: 0 12px 30px rgba(217, 95, 122, 0.34);
       transition: 0.25s ease;
     }
 
-    .btn:hover {
+    .btn:hover,
+    .book-now-btn:hover {
       transform: translateY(-2px);
       background: var(--rose-dark);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--rose-dark);
+      border: 1px solid rgba(217, 95, 122, 0.26);
+      box-shadow: 0 12px 28px rgba(90, 58, 46, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background: #fff1ec;
+      color: var(--rose-dark);
+    }
+
+    .btn-sms {
+      background: var(--brown);
+      color: white;
+      box-shadow: 0 12px 28px rgba(90, 58, 46, 0.24);
+    }
+
+    .btn-sms:hover {
+      background: #3b261f;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
     }
 
     .site-header {
@@ -157,6 +191,14 @@
       color: white;
       border-radius: 999px;
       box-shadow: 0 10px 24px rgba(217, 95, 122, 0.28);
+    }
+
+    .nav .nav-sms {
+      padding: 10px 18px;
+      background: var(--brown);
+      color: white;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(90, 58, 46, 0.2);
     }
 
     .menu-toggle {
@@ -739,7 +781,8 @@
         background: #fff1ec;
       }
 
-      .nav .nav-call {
+      .nav .nav-call,
+      .nav .nav-sms {
         text-align: center;
         margin-top: 6px;
       }
@@ -774,7 +817,12 @@
         border-radius: 26px;
       }
 
-      .btn {
+      .btn,
+      .book-now-btn {
+        width: 100%;
+      }
+
+      .action-buttons {
         width: 100%;
       }
 
@@ -817,7 +865,8 @@
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQs</a>
         <a href="#contact">Contact</a>
-        <a class="nav-call" href="tel:+17755129269">Call to Book</a>
+        <a class="nav-call" href="tel:+17755129269">Call Now</a>
+        <a class="nav-sms" href="sms:+17755129269">Text Now</a>
       </nav>
     </div>
   </header>
@@ -841,7 +890,19 @@
             Step away from stress and enjoy a quiet, clean, and relaxing spa experience designed to help your body unwind.
           </p>
 
-          <a class="btn" href="tel:+17755129269">Call to Book</a>
+          <div class="action-buttons">
+            <button
+              type="button"
+              id="Anywhere_button_iframe"
+              class="book-now-btn anywhere-book-now-button"
+              data-booking-url="https://massagespamx4o.setmore.com"
+              data-new-tab="false">
+              Book Now
+            </button>
+
+            <a class="btn btn-secondary" href="tel:+17755129269">Call Now</a>
+            <a class="btn btn-sms" href="sms:+17755129269">Text Now</a>
+          </div>
 
           <div class="hero-info">
             <span>Open 9:00 AM - 10:30 PM</span>
@@ -898,11 +959,14 @@
             <div class="eyebrow">Services & Pricing</div>
             <h2 class="section-title">Choose your relaxation session.</h2>
             <p class="section-lead">
-              Pricing is based on the in-store menu. Please call to confirm availability before visiting.
+              Pricing is based on the in-store menu. Please call or text to confirm availability before visiting.
             </p>
           </div>
 
-          <a class="btn" href="tel:+17755129269">Call to Book</a>
+          <div class="action-buttons">
+            <a class="btn" href="tel:+17755129269">Call Now</a>
+            <a class="btn btn-sms" href="sms:+17755129269">Text Now</a>
+          </div>
         </div>
 
         <div class="service-grid">
@@ -1090,10 +1154,10 @@
       <div class="container">
         <div class="call-card">
           <div>
-            <div class="eyebrow">Call to Book</div>
+            <div class="eyebrow">Call or Text to Book</div>
             <h2 class="section-title">Ready to relax?</h2>
             <p class="section-lead">
-              For the fastest appointment confirmation, please call Massage Spa directly.
+              For the fastest appointment confirmation, please book online, call Massage Spa directly, or send a text message.
             </p>
 
             <div class="call-details">
@@ -1103,7 +1167,10 @@
             </div>
           </div>
 
-          <a class="btn" href="tel:+17755129269">Call to Book</a>
+          <div class="action-buttons">
+            <a class="btn" href="tel:+17755129269">Call Now</a>
+            <a class="btn btn-sms" href="sms:+17755129269">Text Now</a>
+          </div>
         </div>
       </div>
     </section>
@@ -1211,7 +1278,7 @@
         <div class="eyebrow">Contact & Location</div>
         <h2 class="section-title">Visit Massage Spa in Reno.</h2>
         <p class="section-lead">
-          Call ahead for same-day availability or use the map below to find the spa.
+          Book online, call ahead for same-day availability, or send a text message.
         </p>
 
         <div class="contact-grid">
@@ -1225,6 +1292,11 @@
               </div>
 
               <div>
+                <strong>Text Message</strong>
+                <a href="sms:+17755129269">Text (775) 512-9269</a>
+              </div>
+
+              <div>
                 <strong>Business Hours</strong>
                 <p>9:00 AM - 10:30 PM</p>
               </div>
@@ -1235,8 +1307,9 @@
               </div>
             </div>
 
-            <div style="margin-top:24px;">
-              <a class="btn" href="tel:+17755129269">Call to Book</a>
+            <div class="action-buttons" style="margin-top:24px;">
+              <a class="btn" href="tel:+17755129269">Call Now</a>
+              <a class="btn btn-sms" href="sms:+17755129269">Text Now</a>
             </div>
           </div>
 
@@ -1258,6 +1331,8 @@
       © <span id="year"></span> Massage Spa. All rights reserved.
     </div>
   </footer>
+
+  <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
 
   <script>
     const menuToggle = document.querySelector(".menu-toggle");
